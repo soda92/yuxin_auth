@@ -1,6 +1,6 @@
 [project]
 name = "yuxin-auth"
-version = "2025.7.25.1"
+version = "2025.7.25.2"
 description = "使用requests登录宇信系统"
 readme = "README.md"
 requires-python = ">=3.12"

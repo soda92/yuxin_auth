@@ -1,0 +1,10 @@
+[project]
+name = "yuxin-auth"
+version = "2025.7.25.0"
+description = "使用requests登录宇信系统"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ddddocr>=1.5.6",
+    "requests>=2.32.4",
+]

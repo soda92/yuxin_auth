@@ -40,6 +40,11 @@ class LoginSystem:
         self.max_retries = 10000  # 最大登录重试次数
         self.retry_interval = 3  # 每次重试的间隔时间（秒）
         self.login_url = url
+        if self.login_url.endswith('/'):
+            self.login_url = self.login_url[:-1]
+        
+        if 'phis/app/login' not in self.login_url:
+            self.login_url += '/phis/app/login'
 
         # 构造登录所需的表单数据
         self.credentials = {

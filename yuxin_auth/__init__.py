@@ -10,18 +10,10 @@ import re
 import time
 import requests
 import hashlib
-from contextlib import redirect_stdout
 import ddddocr
-import os
 
 def silent_ddddocr():
-    """
-    静默模式初始化 ddddocr，抑制其在控制台打印的加载信息。
-    通过将标准输出重定向到 os.devnull 来实现。
-    """
-    with open(os.devnull, 'w', encoding='utf8') as f:
-        with redirect_stdout(f):
-            return ddddocr.DdddOcr()
+    return ddddocr.DdddOcr(show_ad=False)
 
 
 class LoginSystem:
